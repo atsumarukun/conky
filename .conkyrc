@@ -1,0 +1,60 @@
+conky.config = {
+
+-- System settings --#
+	background = false,
+	update_interval = 1,
+	override_utf8_locale = true,
+	double_buffer = true,
+	no_buffers = true,
+	imlib_cache_size = 0,
+
+-- Window settings -- #
+	own_window = true,
+	own_window_argb_visual = true,
+	own_window_argb_value = 190,
+	own_window_colour = 'FF6C94',
+	own_window_class = 'Conky',
+	own_window_type = 'dock',
+	own_window_hints = 'undecorated,below,skip_taskbar,skip_pager,sticky',
+	minimum_height = 1080,
+	minimum_width = 600,
+	alignment = 'middle_right',
+	gap_x = 5,
+	gap_y = 0,
+	
+
+-- Graphic settings -- #
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+
+-- Text settings -- #
+	use_xft = true,
+	font = 'Source Code Variable:style=Roman:size=12',
+	xftalpha = 0.8,
+	out_to_console = false,
+	out_to_stderr = false,
+	uppercase = false,
+	default_color='FFFFFF',
+
+-- Graph settings --- #
+	show_graph_scale = false,
+	show_graph_range = false,
+
+-- Load Script -- #
+	lua_load = '~/.conky/circle/script.lua',
+	lua_draw_hook_post = 'main'
+
+}
+
+conky.text = [[
+
+
+
+
+
+$alignc${font Print Clearly:bold:size=135}${time %k:%M}${font}
+
+$alignc${font Print Clearly:thin:size=35}${execi 300 LANG=es_ES.UTF-8 date +"%A %B %d"}${font}
+]]
